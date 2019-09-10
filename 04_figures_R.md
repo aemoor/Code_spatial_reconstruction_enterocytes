@@ -250,8 +250,6 @@ str(cell_ids)
 
 ``` r
 mat_export<-mat_filtered
-colnames(mat_export)<-cell_ids
-row.names(mat_export)<-genes
 mat_export$gene<-genes
 mat_export <- mat_export[, c(1384, 1:1383)]
 write.table(mat_export,file="./tables/scRNAseq_UMI_table.tsv",row.names = F,quote = F,sep="\t")
